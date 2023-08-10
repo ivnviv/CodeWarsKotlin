@@ -9,20 +9,20 @@ You have to write the ATM's function that determines the minimal number of bankn
 Return that number, or -1 if it is impossible.
  */
 
-
-
 class ATM {
 
 
     fun count(number: Int): Int {
+        val banknotes = intArrayOf(500, 200, 100, 50, 20, 10)
         var count: Int = 0
-        if (number % 10 != 0)
-            return -1
-        else
-            while (number > 0)
+        var amount = number
 
+        for (banknote in banknotes) {
+            count += amount / banknote
+            amount %= banknote
+        }
 
-                return count
+        return if (amount == 0) count else -1
     }
 
     @Test
