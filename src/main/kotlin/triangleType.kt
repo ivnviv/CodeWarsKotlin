@@ -15,6 +15,6 @@ class triangleType {
 
     fun triangleType(a: Double, b: Double, c: Double): Int {
 
-        return TODO("Provide the return value")
+        return TODO("Provide the return123 value")
     }
 }
